@@ -13,50 +13,50 @@ const moduleData = {
       {
         question: "What are the three main types of golf grips?",
         options: [
-          "Overlapping, Interlocking, and Baseball",
           "Strong, Neutral, and Weak",
-          "Left-hand, Right-hand, and Two-handed",
-          "Firm, Medium, and Loose"
-        ],
-        correctAnswer: 0
-      },
-      {
-        question: "Where should your left thumb be positioned in a proper grip (for right-handed golfers)?",
-        options: [
-          "Directly on top of the grip",
-          "Slightly to the right of center on the grip",
-          "Wrapped completely around the grip",
-          "Extended straight down the shaft"
+          "Interlock, Overlap, and Ten Finger",
+          "Palm, Finger, and Baseball",
+          "Left-hand, Right-hand, and Two-handed"
         ],
         correctAnswer: 1
       },
       {
-        question: "How tight should your grip pressure be on a scale of 1-10?",
+        question: "For a right-handed golfer, where should the club sit in your left hand?",
         options: [
-          "9-10 (Very tight)",
-          "7-8 (Firm)",
-          "4-6 (Medium firm)",
-          "1-3 (Very light)"
+          "Deep in the palm",
+          "In the fingertips only",
+          "Right where your knuckles are",
+          "Between the thumb and index finger"
         ],
         correctAnswer: 2
       },
       {
-        question: "When looking down at your grip, how many knuckles should you see on your left hand for a neutral grip?",
+        question: "What happens if the club sits too much in your fingers (too strong a grip)?",
         options: [
-          "One knuckle",
-          "Two to three knuckles",
-          "Four knuckles",
-          "No knuckles"
+          "The ball will go way right",
+          "The ball will go left",
+          "You'll have no control",
+          "The club will slip"
         ],
         correctAnswer: 1
       },
       {
-        question: "What is the primary benefit of maintaining a consistent grip?",
+        question: "In an interlock grip, where does the right hand pinky go?",
         options: [
-          "It makes the club feel heavier",
-          "It allows for maximum power on every shot",
-          "It promotes consistent clubface control and shot direction",
-          "It prevents blisters and calluses"
+          "On top of the left pinky",
+          "Underneath the left pinky",
+          "Between the left index and middle finger",
+          "Separate from the left hand"
+        ],
+        correctAnswer: 1
+      },
+      {
+        question: "What is the correct grip pressure you should use?",
+        options: [
+          "Grip as hard as possible for maximum control",
+          "Grip very softly to maintain flexibility",
+          "A nice medium grip strength",
+          "It doesn't matter, any pressure works"
         ],
         correctAnswer: 2
       }
@@ -69,58 +69,347 @@ const moduleData = {
     videoUrl: null,
     quizQuestions: [
       {
-        question: "How wide should your stance be for a standard iron shot?",
+        question: "How wide should your stance be when hitting a 7 iron?",
         options: [
           "Feet together",
-          "Shoulder-width apart",
-          "Wider than shoulders",
+          "Shoulder width apart",
+          "Wider than shoulder width",
           "As wide as possible"
         ],
         correctAnswer: 1
       },
       {
-        question: "What should your spine angle look like at address?",
+        question: "What angle should your back be bent at during setup?",
         options: [
-          "Perfectly straight and vertical",
-          "Tilted forward from the hips",
-          "Leaning backward",
-          "Curved in a C-shape"
+          "20-25 degrees",
+          "35-40 degrees",
+          "50-60 degrees",
+          "Completely straight"
         ],
         correctAnswer: 1
       },
       {
-        question: "Where should your weight be distributed in your stance?",
+        question: "How should your arms hang at address?",
         options: [
-          "Entirely on your heels",
-          "Entirely on your toes",
-          "Evenly distributed on the balls of your feet",
-          "On the outside edges of your feet"
+          "Reaching far out from your body",
+          "Tucked close to your chest",
+          "Pretty much straight down to the ground",
+          "Bent at 90 degrees"
         ],
         correctAnswer: 2
       },
       {
-        question: "How much should your knees be flexed at address?",
+        question: "Why do you need bend in your knees at address?",
         options: [
-          "Locked straight",
-          "Slightly flexed, like an athletic position",
-          "Deeply bent in a squat",
-          "One straight, one bent"
+          "To look athletic",
+          "To allow you to get power from your lower body",
+          "To prevent back pain",
+          "To see the ball better"
         ],
         correctAnswer: 1
       },
       {
-        question: "What is the purpose of proper posture in the golf swing?",
+        question: "What's different about the driver setup compared to an iron?",
         options: [
-          "To look professional",
-          "To create the proper swing plane and maintain balance",
-          "To intimidate your opponents",
-          "To make the swing more difficult"
+          "Feet are closer together",
+          "Feet are a little farther than shoulder width, with a slight shoulder tilt",
+          "Back is completely straight",
+          "Knees are locked"
         ],
         correctAnswer: 1
       }
     ]
   },
-  // Additional modules 3-7 would follow the same structure
+  3: {
+    title: "Alignment",
+    icon: "🎯",
+    description: "Master proper alignment to ensure you're aimed at your target.",
+    videoUrl: null,
+    quizQuestions: [
+      {
+        question: "What is the target line in golf?",
+        options: [
+          "The line from the ball to where you're standing",
+          "The imaginary line from the ball to your target",
+          "The line your feet make at address",
+          "The line parallel to your shoulders"
+        ],
+        correctAnswer: 1
+      },
+      {
+        question: "How should your feet be aligned relative to the target line?",
+        options: [
+          "Directly at the target",
+          "Parallel to the target line (slightly left for right-handed golfers)",
+          "Perpendicular to the target line",
+          "At a 45-degree angle to the target"
+        ],
+        correctAnswer: 1
+      },
+      {
+        question: "What should be aligned parallel to each other at address?",
+        options: [
+          "Feet, knees, hips, and shoulders",
+          "Only feet and shoulders",
+          "Hands and clubface",
+          "Ball position and target"
+        ],
+        correctAnswer: 0
+      },
+      {
+        question: "Where should the clubface be aimed at address?",
+        options: [
+          "Slightly left of target",
+          "Directly at your feet",
+          "Directly at the target",
+          "Slightly right of target"
+        ],
+        correctAnswer: 2
+      },
+      {
+        question: "Why is proper alignment crucial in golf?",
+        options: [
+          "It makes you look professional",
+          "It ensures you're aimed at your target and promotes consistent ball flight",
+          "It helps you swing harder",
+          "It prevents injuries"
+        ],
+        correctAnswer: 1
+      }
+    ]
+  },
+  4: {
+    title: "Backswing",
+    icon: "↰",
+    description: "Learn the proper backswing mechanics to create power and consistency.",
+    videoUrl: null,
+    quizQuestions: [
+      {
+        question: "What initiates the backswing?",
+        options: [
+          "The hands moving first",
+          "The shoulders rotating",
+          "A unified turn of the shoulders, arms, and club together (the takeaway)",
+          "Lifting the club straight up"
+        ],
+        correctAnswer: 2
+      },
+      {
+        question: "At the top of the backswing, where should your weight be distributed?",
+        options: [
+          "Evenly on both feet",
+          "Primarily on your front foot",
+          "Primarily on your back foot (right foot for right-handed golfers)",
+          "Entirely on your toes"
+        ],
+        correctAnswer: 2
+      },
+      {
+        question: "What should your lead arm (left arm for right-handed golfers) look like at the top of the backswing?",
+        options: [
+          "Bent at 90 degrees",
+          "Relatively straight and extended",
+          "Completely relaxed and loose",
+          "Tucked close to your body"
+        ],
+        correctAnswer: 1
+      },
+      {
+        question: "How far should your shoulders rotate during the backswing?",
+        options: [
+          "About 90 degrees",
+          "About 45 degrees",
+          "About 180 degrees",
+          "No rotation needed"
+        ],
+        correctAnswer: 0
+      },
+      {
+        question: "What is the purpose of the backswing?",
+        options: [
+          "To show off your flexibility",
+          "To create potential energy and set the club in proper position for the downswing",
+          "To confuse your opponents",
+          "To rest before hitting the ball"
+        ],
+        correctAnswer: 1
+      }
+    ]
+  },
+  5: {
+    title: "Downswing",
+    icon: "↓",
+    description: "Master the downswing sequence to maximize power and accuracy.",
+    videoUrl: null,
+    quizQuestions: [
+      {
+        question: "What initiates the downswing?",
+        options: [
+          "The arms pulling down",
+          "The lower body (hips) starting to rotate toward the target",
+          "The shoulders turning",
+          "The wrists unhinging immediately"
+        ],
+        correctAnswer: 1
+      },
+      {
+        question: "During the downswing, how should your weight shift?",
+        options: [
+          "Stay on your back foot",
+          "Transfer from your back foot to your front foot",
+          "Jump off both feet",
+          "Shift to your heels"
+        ],
+        correctAnswer: 1
+      },
+      {
+        question: "What is 'lag' in the golf swing?",
+        options: [
+          "When you're slow to start your swing",
+          "The angle maintained between the club shaft and your lead arm during the downswing",
+          "Waiting too long to hit the ball",
+          "The delay in your follow-through"
+        ],
+        correctAnswer: 1
+      },
+      {
+        question: "What should your hips be doing during the downswing?",
+        options: [
+          "Staying completely still",
+          "Rotating toward the target (clearing)",
+          "Sliding laterally without rotation",
+          "Moving backward away from the ball"
+        ],
+        correctAnswer: 1
+      },
+      {
+        question: "Why is the downswing sequence (lower body first, then upper body) important?",
+        options: [
+          "It looks more professional",
+          "It generates maximum power and ensures solid contact",
+          "It's easier on your back",
+          "It makes the swing slower"
+        ],
+        correctAnswer: 1
+      }
+    ]
+  },
+  6: {
+    title: "Impact",
+    icon: "💥",
+    description: "Perfect your impact position for solid, consistent ball striking.",
+    videoUrl: null,
+    quizQuestions: [
+      {
+        question: "At impact, where should your weight be distributed?",
+        options: [
+          "Evenly on both feet",
+          "Primarily on your back foot",
+          "Primarily on your front foot (about 70-80%)",
+          "Completely off the ground"
+        ],
+        correctAnswer: 2
+      },
+      {
+        question: "What should the clubface position be at impact?",
+        options: [
+          "Open (facing right for right-handed golfers)",
+          "Closed (facing left for right-handed golfers)",
+          "Square to the target line",
+          "Perpendicular to the ground"
+        ],
+        correctAnswer: 2
+      },
+      {
+        question: "Where should your hands be at impact relative to the ball?",
+        options: [
+          "Behind the ball",
+          "Directly above the ball",
+          "Slightly ahead of the ball",
+          "At your back hip"
+        ],
+        correctAnswer: 2
+      },
+      {
+        question: "What should happen to the divot (if taking one) with an iron shot?",
+        options: [
+          "It should be taken before the ball",
+          "It should be taken after the ball (ball first, then ground)",
+          "No divot should be taken",
+          "It should be as deep as possible"
+        ],
+        correctAnswer: 1
+      },
+      {
+        question: "Why is impact position the most critical moment in the golf swing?",
+        options: [
+          "It's when the photo is taken",
+          "It's where the club actually contacts the ball and determines ball flight",
+          "It's the easiest part of the swing",
+          "It's when you can relax"
+        ],
+        correctAnswer: 1
+      }
+    ]
+  },
+  7: {
+    title: "Follow-through",
+    icon: "↗",
+    description: "Complete your swing with a balanced, full follow-through.",
+    videoUrl: null,
+    quizQuestions: [
+      {
+        question: "After impact, where should most of your weight end up?",
+        options: [
+          "On your back foot",
+          "Evenly distributed",
+          "Almost entirely on your front foot",
+          "Off the ground"
+        ],
+        correctAnswer: 2
+      },
+      {
+        question: "What should your body position look like at the finish?",
+        options: [
+          "Bent forward at the waist",
+          "Balanced with chest facing the target and back heel off the ground",
+          "Leaning backward",
+          "Twisted uncomfortably"
+        ],
+        correctAnswer: 1
+      },
+      {
+        question: "How high should your hands finish in a full swing?",
+        options: [
+          "At waist height",
+          "At shoulder height",
+          "Above your head in a high finish",
+          "Down by your legs"
+        ],
+        correctAnswer: 2
+      },
+      {
+        question: "What does a balanced finish position indicate?",
+        options: [
+          "You swung too slowly",
+          "You maintained good tempo and mechanics throughout the swing",
+          "You're trying too hard",
+          "Nothing important"
+        ],
+        correctAnswer: 1
+      },
+      {
+        question: "Why is the follow-through important if the ball has already been hit?",
+        options: [
+          "It's not important, it's just for show",
+          "It ensures you completed the swing with proper tempo and didn't decelerate at impact",
+          "It impresses your playing partners",
+          "It helps you find your ball"
+        ],
+        correctAnswer: 1
+      }
+    ]
+  }
 };
 
 export default function ModulePage() {
