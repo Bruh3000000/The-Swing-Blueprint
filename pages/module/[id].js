@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { ArrowLeft, CheckCircle, XCircle, Play, Award } from 'lucide-react';
 
-// Module data - you'll add your video URLs here once you upload them
+// Module data - Videos now added!
 const moduleData = {
   1: {
     title: "The Grip",
     icon: "🤝",
     description: "Learn the fundamental grip that provides control and consistency in your golf swing.",
-    videoUrl: null, // You'll replace this with your video file path
+    videoUrl: "https://www.youtube.com/embed/yTiGXYZYvOA",
     quizQuestions: [
       {
         question: "What are the three main types of golf grips?",
@@ -66,7 +66,7 @@ const moduleData = {
     title: "Stance & Posture",
     icon: "🧍",
     description: "Develop a solid foundation with proper stance and posture for a repeatable swing.",
-    videoUrl: null,
+    videoUrl: "https://www.youtube.com/embed/ORLhqPy4lmA",
     quizQuestions: [
       {
         question: "How wide should your stance be when hitting a 7 iron?",
@@ -124,7 +124,7 @@ const moduleData = {
     title: "Alignment",
     icon: "🎯",
     description: "Master proper alignment to ensure you're aimed at your target.",
-    videoUrl: null,
+    videoUrl: "https://www.youtube.com/embed/-Jy8bcPGEhU",
     quizQuestions: [
       {
         question: "What is the target line in golf?",
@@ -182,7 +182,7 @@ const moduleData = {
     title: "Backswing",
     icon: "↰",
     description: "Learn the proper backswing mechanics to create power and consistency.",
-    videoUrl: null,
+    videoUrl: "https://www.youtube.com/embed/aF8LUS4MKWY",
     quizQuestions: [
       {
         question: "What initiates the backswing?",
@@ -560,14 +560,13 @@ export default function ModulePage() {
             
             {module.videoUrl ? (
               <div className="relative bg-gray-900 rounded-lg overflow-hidden aspect-video mb-6">
-                <video
-                  controls
+                <iframe
                   className="w-full h-full"
-                  onEnded={handleVideoComplete}
-                >
-                  <source src={module.videoUrl} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+                  src={module.videoUrl}
+                  title={`${module.title} Instructional Video`}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
               </div>
             ) : (
               <div className="relative bg-gray-200 rounded-lg overflow-hidden aspect-video mb-6 flex items-center justify-center">
