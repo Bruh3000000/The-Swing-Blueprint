@@ -240,7 +240,7 @@ const moduleData = {
     title: "Downswing",
     icon: "↓",
     description: "Master the downswing sequence to maximize power and accuracy.",
-    videoUrl: null,
+    videoUrl: "https://www.youtube.com/embed/wSrMx9NaSD8",
     quizQuestions: [
       {
         question: "What initiates the downswing?",
@@ -298,7 +298,7 @@ const moduleData = {
     title: "Impact",
     icon: "💥",
     description: "Perfect your impact position for solid, consistent ball striking.",
-    videoUrl: null,
+    videoUrl: "https://www.youtube.com/embed/0VdVCjBrPQo",
     quizQuestions: [
       {
         question: "At impact, where should your weight be distributed?",
@@ -356,7 +356,7 @@ const moduleData = {
     title: "Follow-through",
     icon: "↗",
     description: "Complete your swing with a balanced, full follow-through.",
-    videoUrl: null,
+    videoUrl: "https://www.youtube.com/embed/Oxnbghh6sw4",
     quizQuestions: [
       {
         question: "After impact, where should most of your weight end up?",
