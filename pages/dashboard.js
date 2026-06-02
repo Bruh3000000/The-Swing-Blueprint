@@ -11,6 +11,7 @@ export default function Dashboard() {
   const [loading, setLoading] = useState(true);
   const [userProgress, setUserProgress] = useState([]);
   const [achievements, setAchievements] = useState([]);
+  const [refreshing, setRefreshing] = useState(false);
 
   const modules = [
     { id: 1, name: 'Grip', icon: '🤝', completed: false },
@@ -157,6 +158,12 @@ export default function Dashboard() {
     router.push('/');
   };
 
+  const handleRefresh = async () => {
+    setRefreshing(true);
+    await fetchUserProgress(user.id);
+    setRefreshing(false);
+  };
+
   const handleModuleClick = (moduleId) => {
     router.push(`/module/${moduleId}`);
   };
@@ -218,9 +225,18 @@ export default function Dashboard() {
         <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-2xl font-bold text-gray-900">Your Progress</h2>
-            <div className="flex items-center space-x-2">
-              <Trophy className="w-6 h-6 text-yellow-500" />
-              <span className="text-2xl font-bold text-green-600">{progressPercentage}%</span>
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-2">
+                <Trophy className="w-6 h-6 text-yellow-500" />
+                <span className="text-2xl font-bold text-green-600">{progressPercentage}%</span>
+              </div>
+              <button
+                onClick={handleRefresh}
+                disabled={refreshing}
+                className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition font-semibold disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2"
+              >
+                <span>{refreshing ? 'Updating...' : '🔄 Refresh'}</span>
+              </button>
             </div>
           </div>
           
