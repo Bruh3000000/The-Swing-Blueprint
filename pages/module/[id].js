@@ -559,15 +559,31 @@ export default function ModulePage() {
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Instructional Video</h2>
             
             {module.videoUrl ? (
-              <div className="relative bg-gray-900 rounded-lg overflow-hidden aspect-video mb-6">
-                <iframe
-                  className="w-full h-full"
-                  src={module.videoUrl}
-                  title={`${module.title} Instructional Video`}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
+              <>
+                <div className="relative bg-gray-900 rounded-lg overflow-hidden aspect-video mb-6">
+                  <iframe
+                    className="w-full h-full"
+                    src={module.videoUrl}
+                    title={`${module.title} Instructional Video`}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+                {!videoWatched && (
+                  <button
+                    onClick={handleVideoComplete}
+                    className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition font-semibold mb-6"
+                  >
+                    ✓ Mark Video as Watched
+                  </button>
+                )}
+                {videoWatched && (
+                  <div className="w-full bg-green-100 text-green-700 py-3 rounded-lg font-semibold text-center mb-6 flex items-center justify-center gap-2">
+                    <CheckCircle className="w-5 h-5" />
+                    Video Watched - Quiz Unlocked!
+                  </div>
+                )}
+              </>
             ) : (
               <div className="relative bg-gray-200 rounded-lg overflow-hidden aspect-video mb-6 flex items-center justify-center">
                 <div className="text-center">
@@ -589,7 +605,7 @@ export default function ModulePage() {
                   : 'bg-gray-300 text-gray-500 cursor-not-allowed'
               }`}
             >
-              {videoWatched || !module.videoUrl ? 'Start Quiz' : 'Watch video to unlock quiz'}
+              {videoWatched || !module.videoUrl ? '🎯 Start Quiz' : 'Watch video and click the button above to unlock'}
             </button>
           </div>
         )}
